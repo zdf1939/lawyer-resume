@@ -749,9 +749,10 @@ function triggerSearch(keyword) {
   years.forEach(y => {
     if (visibleYears.has(y.dataset.year)) y.style.display = 'block';
   });
-  
+
   if (window.innerWidth <= 768) {
     sidebar.classList.add('show');
+    sidebar.scrollTop = 0;
   }  
 
   if (matchedIds.length === 0) {
