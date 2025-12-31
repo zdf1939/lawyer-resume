@@ -9,10 +9,36 @@
 /* ===== 电脑端 ===== */
 body{margin:0;font-family:PingFang SC,Microsoft YaHei,sans-serif;background:#f5f6fa}
 header{background:#1f2a44;color:#fff;padding:30px}
+mark {background: #fff3a0;padding: 0 2px;}
 .container{display:flex;min-height:calc(100vh - 120px)}
 .meta{color:#666;margin-bottom:20px}
 .section h3{border-left:4px solid #1f2a44;padding-left:8px}
 @media (min-width: 769px) {
+  header {
+    background: #1f2a44;
+    color: #fff;
+    padding: 30px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-box input {
+    width: 200px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .search-box input::placeholder {
+    color: #999;
+  }
+
   .menu-btn {
     display: none;
   }
@@ -129,6 +155,7 @@ header{background:#1f2a44;color:#fff;padding:30px}
   .menu-btn {
     position: fixed;
     top: 50%;
+    transform: translateY(-50%);
     left: 20px;
     width: 44px;
     height: 44px;
@@ -196,6 +223,19 @@ header{background:#1f2a44;color:#fff;padding:30px}
     margin-bottom: 16px;
   }
 
+  header {
+  background: #1f2a44;
+  color: #fff;
+  padding: 30px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  
   .section {
     background: #fff;
     padding: 16px;
@@ -213,13 +253,21 @@ header{background:#1f2a44;color:#fff;padding:30px}
 </head>
 <body>
 <header>
-<h1>郑治律师</h1>
-<p>刑事案件有效辩护案例展示</p>
-<button class="menu-btn" aria-label="案件目录"></button>
+  <div class="header-inner">
+    <div>
+      <h1>郑治律师</h1>
+      <p>刑事案件经验展示</p>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索案件…" />
+    </div>
+
+  <button class="menu-btn" aria-label="案件目录"></button>
 </header>
 <div class="container">
 <div class="sidebar">
-<div class="year">2020 年</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case0'); hideMenu()">黄某等开设赌场案</div><div class="year">2021 年</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case1'); hideMenu()">张某1、张某2寻衅滋事案</div><div class="month">10 月</div><div class="case-link" onclick="showCase('case2'); hideMenu()">吕某猥亵儿童案</div><div class="month">11 月</div><div class="case-link" onclick="showCase('case3'); hideMenu()">李某等袭警案</div><div class="month">12 月</div><div class="case-link" onclick="showCase('case4'); hideMenu()">张某、程某、彭某、段某诈骗案</div><div class="year">2023 年</div><div class="month">07 月</div><div class="case-link" onclick="showCase('case5'); hideMenu()">侯某等帮助信息网络犯罪活动案</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case6'); hideMenu()">程某传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case7'); hideMenu()">杨某等假冒注册商标案</div><div class="year">2024 年</div><div class="month">01 月</div><div class="case-link" onclick="showCase('case8'); hideMenu()">吴某等生产、销售有毒、有害食品案</div><div class="case-link" onclick="showCase('case9'); hideMenu()">何某销售假冒注册商标的商品案</div><div class="month">02 月</div><div class="case-link" onclick="showCase('case10'); hideMenu()">王某传播淫秽物品案</div><div class="month">04 月</div><div class="case-link" onclick="showCase('case11'); hideMenu()">陈某传播淫秽物品案</div><div class="month">05 月</div><div class="case-link" onclick="showCase('case12'); hideMenu()">郑某开设赌场案</div><div class="case-link" onclick="showCase('case13'); hideMenu()">金某等故意伤害案</div><div class="month">06 月</div><div class="case-link" onclick="showCase('case14'); hideMenu()">吴某、曹某制作、传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case15'); hideMenu()">吴某、胡某贩卖淫秽物品牟利案</div><div class="case-link" onclick="showCase('case16'); hideMenu()">刘某传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case17'); hideMenu()">李某传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case18'); hideMenu()">詹某贩卖淫秽物品牟利案</div><div class="case-link" onclick="showCase('case19'); hideMenu()">王某假冒注册商标案</div><div class="case-link" onclick="showCase('case20'); hideMenu()">黄某强奸案</div><div class="month">07 月</div><div class="case-link" onclick="showCase('case21'); hideMenu()">向某等组织卖淫案</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case22'); hideMenu()">钱某开设赌场案</div><div class="case-link" onclick="showCase('case23'); hideMenu()">林某贩卖淫秽物品牟利案</div><div class="case-link" onclick="showCase('case24'); hideMenu()">赵某等诈骗案</div><div class="month">09 月</div><div class="case-link" onclick="showCase('case25'); hideMenu()">李某制作、传播淫秽物品牟利案</div><div class="month">10 月</div><div class="case-link" onclick="showCase('case26'); hideMenu()">孙某传播淫秽物品案</div><div class="case-link" onclick="showCase('case27'); hideMenu()">滚某等介绍卖淫案</div><div class="month">11 月</div><div class="case-link" onclick="showCase('case28'); hideMenu()">李某等涉嫌贩卖、传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case29'); hideMenu()">高某等盗窃案</div><div class="case-link" onclick="showCase('case30'); hideMenu()">陈某强奸案</div><div class="case-link" onclick="showCase('case31'); hideMenu()">任某、陈某、黄某诈骗、偷越国边（境）案</div><div class="year">2025 年</div><div class="month">01 月</div><div class="case-link" onclick="showCase('case32'); hideMenu()">杨某等涉嫌开设赌场案</div><div class="month">03 月</div><div class="case-link" onclick="showCase('case33'); hideMenu()">李某涉嫌传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case34'); hideMenu()">赵某传播淫秽物品案</div><div class="month">04 月</div><div class="case-link" onclick="showCase('case35'); hideMenu()">张某涉嫌传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case36'); hideMenu()">吴某传播淫秽物品牟利案</div><div class="month">05 月</div><div class="case-link" onclick="showCase('case37'); hideMenu()">曹书程涉嫌传播淫秽物品案</div><div class="month">06 月</div><div class="case-link" onclick="showCase('case38'); hideMenu()">王某涉嫌诈骗案</div><div class="case-link" onclick="showCase('case39'); hideMenu()">朱某开设赌场案</div><div class="case-link" onclick="showCase('case40'); hideMenu()">姚某传播淫秽物品牟利案</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case41'); hideMenu()">王某等诈骗案</div><div class="month">09 月</div><div class="case-link" onclick="showCase('case42'); hideMenu()">刘某等贩卖淫秽物品牟利案</div><div class="month">11 月</div><div class="case-link" onclick="showCase('case43'); hideMenu()">方某传播淫秽物品案</div>
+<div class="year">2020 年</div><div class="month">08 月</div><div class="case-link" data-id="case0" onclick="showCase('case0'); hideMenu()">黄某等开设赌场案</div><div class="year">2021 年</div><div class="month">08 月</div><div class="case-link" data-id="case1" onclick="showCase('case1'); hideMenu()">张某1、张某2寻衅滋事案</div><div class="month">10 月</div><div class="case-link" data-id="case2" onclick="showCase('case2'); hideMenu()">吕某猥亵儿童案</div><div class="month">11 月</div><div class="case-link" data-id="case3" onclick="showCase('case3'); hideMenu()">李某等袭警案</div><div class="month">12 月</div><div class="case-link" data-id="case4" onclick="showCase('case4'); hideMenu()">张某、程某、彭某、段某诈骗案</div><div class="year">2023 年</div><div class="month">07 月</div><div class="case-link" data-id="case5" onclick="showCase('case5'); hideMenu()">侯某等帮助信息网络犯罪活动案</div><div class="month">08 月</div><div class="case-link" data-id="case6" onclick="showCase('case6'); hideMenu()">程某传播淫秽物品牟利案</div><div class="case-link" data-id="case7" onclick="showCase('case7'); hideMenu()">杨某等假冒注册商标案</div><div class="year">2024 年</div><div class="month">01 月</div><div class="case-link" data-id="case8" onclick="showCase('case8'); hideMenu()">吴某等生产、销售有毒、有害食品案</div><div class="case-link" data-id="case9" onclick="showCase('case9'); hideMenu()">何某销售假冒注册商标的商品案</div><div class="month">02 月</div><div class="case-link" data-id="case10" onclick="showCase('case10'); hideMenu()">王某传播淫秽物品案</div><div class="month">04 月</div><div class="case-link" data-id="case11" onclick="showCase('case11'); hideMenu()">陈某传播淫秽物品案</div><div class="month">05 月</div><div class="case-link" data-id="case12" onclick="showCase('case12'); hideMenu()">郑某开设赌场案</div><div class="case-link" data-id="case13" onclick="showCase('case13'); hideMenu()">金某等故意伤害案</div><div class="month">06 月</div><div class="case-link" data-id="case14" onclick="showCase('case14'); hideMenu()">吴某、曹某制作、传播淫秽物品牟利案</div><div class="case-link" data-id="case15" onclick="showCase('case15'); hideMenu()">吴某、胡某贩卖淫秽物品牟利案</div><div class="case-link" data-id="case16" onclick="showCase('case16'); hideMenu()">刘某传播淫秽物品牟利案</div><div class="case-link" data-id="case17" onclick="showCase('case17'); hideMenu()">李某传播淫秽物品牟利案</div><div class="case-link" data-id="case18" onclick="showCase('case18'); hideMenu()">詹某贩卖淫秽物品牟利案</div><div class="case-link" data-id="case19" onclick="showCase('case19'); hideMenu()">王某假冒注册商标案</div><div class="case-link" data-id="case20" onclick="showCase('case20'); hideMenu()">黄某强奸案</div><div class="month">07 月</div><div class="case-link" data-id="case21" onclick="showCase('case21'); hideMenu()">向某等组织卖淫案</div><div class="month">08 月</div><div class="case-link" data-id="case22" onclick="showCase('case22'); hideMenu()">钱某开设赌场案</div><div class="case-link" data-id="case23" onclick="showCase('case23'); hideMenu()">林某贩卖淫秽物品牟利案</div><div class="case-link" data-id="case24" onclick="showCase('case24'); hideMenu()">赵某等诈骗案</div><div class="month">09 月</div><div class="case-link" data-id="case25" onclick="showCase('case25'); hideMenu()">李某制作、传播淫秽物品牟利案</div><div class="month">10 月</div><div class="case-link" data-id="case26" onclick="showCase('case26'); hideMenu()">孙某传播淫秽物品案</div><div class="case-link" data-id="case27" onclick="showCase('case27'); hideMenu()">滚某等介绍卖淫案</div><div class="month">11 月</div><div class="case-link" data-id="case28" onclick="showCase('case28'); hideMenu()">李某等涉嫌贩卖、传播淫秽物品牟利案</div><div class="case-link" data-id="case29" onclick="showCase('case29'); hideMenu()">高某等盗窃案</div><div class="case-link" data-id="case30" onclick="showCase('case30'); hideMenu()">陈某强奸案</div><div class="case-link" data-id="case31" onclick="showCase('case31'); hideMenu()">任某、陈某、黄某诈骗、偷越国边（境）案</div><div class="year">2025 年</div><div class="month">01 月</div><div class="case-link" data-id="case32" onclick="showCase('case32'); hideMenu()">杨某等涉嫌开设赌场案</div><div class="month">03 月</div><div class="case-link" data-id="case33" onclick="showCase('case33'); hideMenu()">李某涉嫌传播淫秽物品牟利案</div><div class="case-link" data-id="case34" onclick="showCase('case34'); hideMenu()">赵某传播淫秽物品案</div><div class="month">04 月</div><div class="case-link" data-id="case35" onclick="showCase('case35'); hideMenu()">张某涉嫌传播淫秽物品牟利案</div><div class="case-link" data-id="case36" onclick="showCase('case36'); hideMenu()">吴某传播淫秽物品牟利案</div><div class="month">05 月</div><div class="case-link" data-id="case37" onclick="showCase('case37'); hideMenu()">曹书程涉嫌传播淫秽物品案</div><div class="month">06 月</div><div class="case-link" data-id="case38" onclick="showCase('case38'); hideMenu()">王某涉嫌诈骗案</div><div class="case-link" data-id="case39" onclick="showCase('case39'); hideMenu()">朱某开设赌场案</div><div class="case-link" data-id="case40" onclick="showCase('case40'); hideMenu()">姚某传播淫秽物品牟利案</div><div class="month">08 月</div><div class="case-link" data-id="case41" onclick="showCase('case41'); hideMenu()">王某等诈骗案</div><div class="month">09 月</div><div class="case-link" data-id="case42" onclick="showCase('case42'); hideMenu()">刘某等贩卖淫秽物品牟利案</div><div class="month">11 月</div><div class="case-link" data-id="case43" onclick="showCase('case43'); hideMenu()">方某传播淫秽物品案</div>
 </div>
 <div class="content" id="detail">
 <p>请选择左侧案件查看详情</p>
@@ -581,34 +629,125 @@ result: `有期徒刑7个月，缓刑1年`
 },
 
 };
-
-/* ===== 电脑端 ===== */
-function showCase(id){
-  const c = cases[id];
-  document.getElementById("detail").innerHTML = `
-  <div class="case-content">
-    <div class="case-title">${c.title}</div>
-    <div class="meta">时间：${c.time} ｜ 程序：${c.procedure}</div>
-    <div class="section"><h3>案情</h3><p>${c.detail}</p></div>
-    <div class="section"><h3>结果</h3><p>${c.result}</p></div>
-  `;
-  if (window.innerWidth <= 768) {
-    document.querySelector('.sidebar').classList.remove('show');
-  }
-}
-
-/* ===== 手机端 ===== */
-const menuBtn = document.querySelector('.menu-btn');
+// 可拖拽菜单按钮
+const btn = document.querySelector('.menu-btn');
+let isDragging = false;
+let startY, startTop;
 const sidebar = document.querySelector('.sidebar');
 
-menuBtn.addEventListener('click', () => {
+btn.addEventListener('click', () => {
   sidebar.classList.toggle('show');
 });
+
+btn.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startY = e.clientY;
+  startTop = btn.offsetTop;
+  e.preventDefault();
+});
+
+btn.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startY = e.touches[0].clientY;
+  startTop = btn.offsetTop;
+});
+
+// 鼠标/触摸移动
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  let newTop = startTop + (e.clientY - startY);
+
+  newTop = Math.max(0, Math.min(window.innerHeight - btn.offsetHeight, newTop));
+
+  btn.style.top = newTop + 'px';
+});
+
+document.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  let newTop = startTop + (e.touches[0].clientY - startY);
+  newTop = Math.max(0, Math.min(window.innerHeight - btn.offsetHeight, newTop));
+  btn.style.top = newTop + 'px';
+});
+
+// 鼠标/触摸结束
+document.addEventListener('mouseup', () => { isDragging = false; });
+document.addEventListener('touchend', () => { isDragging = false; });
 
 function hideMenu() {
   sidebar.classList.remove('show');
 }
+
+// 高亮函数
+function highlight(html, keyword) {
+  if (!keyword) return html;
+  const reg = new RegExp(`(${keyword})`, 'gi');
+  return html.replace(reg, '<mark>$1</mark>');
+}
+
+// 显示单个案件详情
+function showCase(id, keyword="") {
+  const c = cases[id];
+  const detail = document.getElementById("detail");
+  detail.innerHTML = `
+    <div class="case-content">
+      <div class="case-title">${highlight(c.title, keyword)}</div>
+      <div class="meta">时间：${c.time} ｜ 程序：${c.procedure}</div>
+      <div class="section"><h3>案情</h3><p>${highlight(c.detail, keyword)}</p></div>
+      <div class="section"><h3>结果</h3><p>${highlight(c.result, keyword)}</p></div>
+    </div>
+  `;
+}
+
+// 搜索功能
+function triggerSearch(keyword) {
+  const links = document.querySelectorAll('.case-link');
+  const detail = document.getElementById("detail");
+  detail.innerHTML = "<p>请选择左侧案件查看详情</p>";
+
+  let hasMatch = false;
+
+  links.forEach(link => {
+    const id = link.dataset.id;
+    const c = cases[id];
+    const text = link.textContent.toLowerCase();
+    const content = `${c.title} ${c.detail} ${c.result}`.toLowerCase();
+    const isMatch = !keyword || text.includes(keyword) || content.includes(keyword);
+
+    link.style.display = isMatch ? 'block' : 'none';
+
+    if (isMatch) hasMatch = true;
+  });
+
+  if (!hasMatch) {
+    detail.innerHTML = "<p>没有匹配的案件</p>";
+  }
+
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('show');
+  }
+}
+
+// 监听搜索输入和目录点击
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('searchInput');
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+      const keyword = input.value.trim().toLowerCase();
+      triggerSearch(keyword);
+    }
+  });
+
+  const links = document.querySelectorAll('.case-link');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      const id = link.dataset.id;
+      const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+      showCase(id, keyword);
+      hideMenu();
+    });
+  });
+});
 </script>
 </body>
 </html>
-
