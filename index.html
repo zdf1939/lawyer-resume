@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>郑治律师｜案件经验展示</title>
+<style>
+body{margin:0;font-family:PingFang SC,Microsoft YaHei,sans-serif;background:#f5f6fa}
+header{background:#1f2a44;color:#fff;padding:30px}
+.container{display:flex;height:calc(100vh - 120px)}
+.sidebar{width:340px;background:#fff;border-right:1px solid #ddd;overflow:auto;padding:20px}
+.content{flex:1;padding:30px;overflow:auto}
+.year{font-weight:bold;margin-top:20px;font-size: 18px}
+.month{margin-left:10px;font-weight:600;margin-top:10px}
+.case-link{margin-left:20px;font-size:14px;cursor:pointer;color:#1f2a44}
+.case-link:hover{text-decoration:underline}
+.case-title{font-size:22px;margin-bottom:10px}
+.meta{color:#666;margin-bottom:20px}
+.section{margin-bottom:20px}
+.section h3{border-left:4px solid #1f2a44;padding-left:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>郑治律师</h1>
+<p>刑事案件办理经验展示</p>
+</header>
+<div class="container">
+<div class="sidebar">
+<div class="year">2020 年</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case0')">黄某等开设赌场案</div><div class="year">2021 年</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case1')">张某1、张某2寻衅滋事案</div><div class="month">10 月</div><div class="case-link" onclick="showCase('case2')">吕某猥亵儿童案</div><div class="month">11 月</div><div class="case-link" onclick="showCase('case3')">李某等袭警案</div><div class="month">12 月</div><div class="case-link" onclick="showCase('case4')">张某、程某、彭某、段某诈骗案</div><div class="year">2023 年</div><div class="month">07 月</div><div class="case-link" onclick="showCase('case5')">侯某等帮助信息网络犯罪活动案</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case6')">程某传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case7')">杨某等假冒注册商标案</div><div class="year">2024 年</div><div class="month">01 月</div><div class="case-link" onclick="showCase('case8')">吴某等生产、销售有毒、有害食品案</div><div class="case-link" onclick="showCase('case9')">何某销售假冒注册商标的商品案</div><div class="month">02 月</div><div class="case-link" onclick="showCase('case10')">王某传播淫秽物品案</div><div class="month">04 月</div><div class="case-link" onclick="showCase('case11')">陈某传播淫秽物品案</div><div class="month">05 月</div><div class="case-link" onclick="showCase('case12')">郑某开设赌场案</div><div class="case-link" onclick="showCase('case13')">金某等故意伤害案</div><div class="month">06 月</div><div class="case-link" onclick="showCase('case14')">吴某、曹某制作、传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case15')">吴某、胡某贩卖淫秽物品牟利案</div><div class="case-link" onclick="showCase('case16')">刘某传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case17')">李某传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case18')">詹某贩卖淫秽物品牟利案</div><div class="case-link" onclick="showCase('case19')">王某假冒注册商标案</div><div class="case-link" onclick="showCase('case20')">黄某强奸案</div><div class="month">07 月</div><div class="case-link" onclick="showCase('case21')">向某等组织卖淫案</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case22')">钱某开设赌场案</div><div class="case-link" onclick="showCase('case23')">林某贩卖淫秽物品牟利案</div><div class="case-link" onclick="showCase('case24')">赵某等诈骗案</div><div class="month">09 月</div><div class="case-link" onclick="showCase('case25')">李某制作、传播淫秽物品牟利案</div><div class="month">10 月</div><div class="case-link" onclick="showCase('case26')">孙某传播淫秽物品案</div><div class="case-link" onclick="showCase('case27')">滚某等介绍卖淫案</div><div class="month">11 月</div><div class="case-link" onclick="showCase('case28')">李某等涉嫌贩卖、传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case29')">高某等盗窃案</div><div class="case-link" onclick="showCase('case30')">陈某强奸案</div><div class="case-link" onclick="showCase('case31')">任某、陈某、黄某诈骗、偷越国边（境）案</div><div class="year">2025 年</div><div class="month">01 月</div><div class="case-link" onclick="showCase('case32')">杨某等涉嫌开设赌场案</div><div class="month">03 月</div><div class="case-link" onclick="showCase('case33')">李某涉嫌传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case34')">赵某传播淫秽物品案</div><div class="month">04 月</div><div class="case-link" onclick="showCase('case35')">张某涉嫌传播淫秽物品牟利案</div><div class="case-link" onclick="showCase('case36')">吴某传播淫秽物品牟利案</div><div class="month">05 月</div><div class="case-link" onclick="showCase('case37')">曹书程涉嫌传播淫秽物品案</div><div class="month">06 月</div><div class="case-link" onclick="showCase('case38')">王某涉嫌诈骗案</div><div class="case-link" onclick="showCase('case39')">朱某开设赌场案</div><div class="case-link" onclick="showCase('case40')">姚某传播淫秽物品牟利案</div><div class="month">08 月</div><div class="case-link" onclick="showCase('case41')">王某等诈骗案</div><div class="month">09 月</div><div class="case-link" onclick="showCase('case42')">刘某等贩卖淫秽物品牟利案</div><div class="month">11 月</div><div class="case-link" onclick="showCase('case43')">方某传播淫秽物品案</div>
+</div>
+<div class="content" id="detail">
+<p>请选择左侧案件查看详情</p>
+</div>
+</div>
+<script>
+const cases = {
+
+"case0": {
+title: "黄某等开设赌场案",
+time: "2020年08月",
+procedure: "一审",
+detail: `利用“波克捕鱼”游戏出售、回购道具，担任客服，累计接受赌徒投注3574925.82元，向赌徒兑换筹码2679392.78元，非法获利895533.04元`,
+result: `有期徒刑1年4个月，罚金5万元`
+},
+
+"case1": {
+title: "张某1、张某2寻衅滋事案",
+time: "2021年08月",
+procedure: "一审",
+detail: `殴打他人致轻微伤`,
+result: `张某1有期徒刑11个月；张某2有期徒刑8个月`
+},
+
+"case2": {
+title: "吕某猥亵儿童案",
+time: "2021年10月",
+procedure: "一审",
+detail: `商场猥亵儿童`,
+result: `有期徒刑1年9个月`
+},
+
+"case3": {
+title: "李某等袭警案",
+time: "2021年11月",
+procedure: "一审",
+detail: `辱骂、推搡、踢打执法民警致轻微伤`,
+result: `有期徒刑9个月，缓刑1年`
+},
+
+"case4": {
+title: "张某、程某、彭某、段某诈骗案",
+time: "2021年12月",
+procedure: "一审",
+detail: `在货拉拉APP内发布虚假订单，张某骗取补贴款1.8万余元；程某1万余元；彭某既遂1.3万余元，未遂0.3万余元；段某1.3万余元`,
+result: `程某、彭某、段某取保候审；张某有期徒刑7个月，罚金2千元；程某拘役6个月，缓刑6个月，罚金1千元；彭某拘役6个月，缓刑6个月，罚金1千元；段某拘役6个月，缓刑6个月，罚金1千元`
+},
+
+"case5": {
+title: "侯某等帮助信息网络犯罪活动案",
+time: "2023年07月",
+procedure: "一审",
+detail: `为网络赌博软件提供支付结算服务，工作室流入资金1.82亿余元，成功取保候审`,
+result: `侯某有期徒刑7个月`
+},
+
+"case6": {
+title: "程某传播淫秽物品牟利案",
+time: "2023年08月",
+procedure: "一审",
+detail: `推特引流，发布淫秽视频61部，淫秽图片6张，获利880元`,
+result: `有期徒刑8个月，罚金4千元`
+},
+
+"case7": {
+title: "杨某等假冒注册商标案",
+time: "2023年08月",
+procedure: "一审",
+detail: `加工假冒卡地亚、梵克雅宝等品牌珠宝，货值400余万元，收取材料加工费38万余元`,
+result: `有期徒刑3年，缓刑5年，罚金40万元`
+},
+
+"case8": {
+title: "吴某等生产、销售有毒、有害食品案",
+time: "2024年01月",
+procedure: "一审",
+detail: `在保健食品中添加西地那非，生产食品20万余片，销售金额达130万余元`,
+result: `有期徒刑10年6个月，罚金200万元`
+},
+
+"case9": {
+title: "何某销售假冒注册商标的商品案",
+time: "2024年01月",
+procedure: "一审",
+detail: `购买假冒LV、蔻驰等品牌服装，销售额150万余元`,
+result: `有期徒刑3年，罚金34万元`
+},
+
+"case10": {
+title: "王某传播淫秽物品案",
+time: "2024年02月",
+procedure: "一审",
+detail: `推特引流，发布淫秽视频20部，淫秽图片61张，喜欢数5.5万余次`,
+result: `取保候审，拘役4个月，缓刑4个月`
+},
+
+"case11": {
+title: "陈某传播淫秽物品案",
+time: "2024年04月",
+procedure: "一审",
+detail: `推特引流，发布淫秽图片23个，淫秽视频7个，点击数67.2万余次`,
+result: `取保候审，拘役6个月，缓刑6个月`
+},
+
+"case12": {
+title: "郑某开设赌场案",
+time: "2024年05月",
+procedure: "一审",
+detail: `赌博网站代理，赌资2252万余元`,
+result: `有期徒刑4年，罚金9万6千元`
+},
+
+"case13": {
+title: "金某等故意伤害案",
+time: "2024年05月",
+procedure: "一审",
+detail: `殴打他人致轻伤，有前科劣迹`,
+result: `取保候审，拘役六个月`
+},
+
+"case14": {
+title: "吴某、曹某制作、传播淫秽物品牟利案",
+time: "2024年06月",
+procedure: "一审",
+detail: `推特引流，发布淫秽视频160部，获利十余万元`,
+result: `取保候审，有期徒刑3年，缓刑3年，罚金7万元`
+},
+
+"case15": {
+title: "吴某、胡某贩卖淫秽物品牟利案",
+time: "2024年06月",
+procedure: "一审",
+detail: `出售淫秽视频20部，获利220元`,
+result: `取保候审，有期徒刑8个月，缓刑1年，罚金1千元`
+},
+
+"case16": {
+title: "刘某传播淫秽物品牟利案",
+time: "2024年06月",
+procedure: "                                                                                                                                                                                                                                                    ",
+detail: `于“萌萝社”APP上传淫秽视频197部，获利655元`,
+result: `取保候审，有期徒刑11个月，缓刑1年，罚金1万元`
+},
+
+"case17": {
+title: "李某传播淫秽物品牟利案",
+time: "2024年06月",
+procedure: "一审",
+detail: `淫秽网站引流，发布淫秽图片818张，收费5.7万余元，分成获利2.8万余元`,
+result: `取保候审，有期徒刑1年，缓刑1年，罚金3万5千元`
+},
+
+"case18": {
+title: "詹某贩卖淫秽物品牟利案",
+time: "2024年06月",
+procedure: "一审",
+detail: `“闲鱼”出售淫秽U盘2个，内有368部淫秽视频`,
+result: `取保候审，有期徒刑7个月，缓刑1年，罚金1千元`
+},
+
+"case19": {
+title: "王某假冒注册商标案",
+time: "2024年06月",
+procedure: "一审",
+detail: `生产假冒太太乐品牌鸡精，销售额50余万元`,
+result: `有期徒刑3年，罚金30万元`
+},
+
+"case20": {
+title: "黄某强奸案",
+time: "2024年06月",
+procedure: "二审",
+detail: `与醉酒状态下被害人发生性关系，致被害人跳楼轻伤，一审判处有期徒刑4年6个月`,
+result: `有期徒刑5年6个月`
+},
+
+"case21": {
+title: "向某等组织卖淫案",
+time: "2024年07月",
+procedure: "一审",
+detail: `招募多个卖淫女（包括未成年）卖淫`,
+result: `有期徒刑6年，罚金4万元`
+},
+
+"case22": {
+title: "钱某开设赌场案",
+time: "2024年08月",
+procedure: "一审",
+detail: `建立微信群收取赌资，成功取保候审`,
+result: `有期徒刑9个月，缓刑1年`
+},
+
+"case23": {
+title: "林某贩卖淫秽物品牟利案",
+time: "2024年08月",
+procedure: "一审",
+detail: `出售淫秽U盘，内有淫秽视频142部，违法所得268元`,
+result: `有期徒刑6个月，罚金1千元`
+},
+
+"case24": {
+title: "赵某等诈骗案",
+time: "2024年08月",
+procedure: "一审",
+detail: `虚假培训诈骗，数额2.2万余元`,
+result: `免予刑事处罚`
+},
+
+"case25": {
+title: "李某制作、传播淫秽物品牟利案",
+time: "2024年09月",
+procedure: "一审",
+detail: `推特引流，发布淫秽视频210部，获利9454元`,
+result: `有期徒刑1年2个月，缓刑1年2个月，罚金2万元`
+},
+
+"case26": {
+title: "孙某传播淫秽物品案",
+time: "2024年10月",
+procedure: "一审",
+detail: `发布淫秽视频链接，内有淫秽视频54部`,
+result: `取保候审，有期徒刑6个月，缓刑1年`
+},
+
+"case27": {
+title: "滚某等介绍卖淫案",
+time: "2024年10月",
+procedure: "一审",
+detail: `招募未成年卖淫女（13岁）卖淫`,
+result: `有期徒刑4年3个月，罚金3万元`
+},
+
+"case28": {
+title: "李某等涉嫌贩卖、传播淫秽物品牟利案",
+time: "2024年11月",
+procedure: "审查起诉",
+detail: `注册机刷淫秽视频网站会员，贩卖淫秽视频至少45个，个人非法获利21506元`,
+result: `取保候审`
+},
+
+"case29": {
+title: "高某等盗窃案",
+time: "2024年11月",
+procedure: "一审",
+detail: `多次剪断电信电缆线出售，累计获利39645元`,
+result: `有期徒刑1年3个月，罚金3千元`
+},
+
+"case30": {
+title: "陈某强奸案",
+time: "2024年11月",
+procedure: "一审",
+detail: `强奸未遂`,
+result: `有期徒刑2年`
+},
+
+"case31": {
+title: "任某、陈某、黄某诈骗、偷越国边（境）案",
+time: "2024年11月",
+procedure: "审查起诉",
+detail: `在境外实施电信网络诈骗`,
+result: `无`
+},
+
+"case32": {
+title: "杨某等涉嫌开设赌场案",
+time: "2025年01月",
+procedure: "审查起诉",
+detail: `利用“新仙魔九界”游戏出租、回购账号，赌资360余万元`,
+result: `无`
+},
+
+"case33": {
+title: "李某涉嫌传播淫秽物品牟利案",
+time: "2025年03月",
+procedure: "审查起诉",
+detail: `推特引流，发布淫秽视频21部，获利10985.7万元`,
+result: `不起诉`
+},
+
+"case34": {
+title: "赵某传播淫秽物品案",
+time: "2025年03月",
+procedure: "一审",
+detail: `推特发布淫秽视频10部，淫秽图片108张`,
+result: `取保候审，拘役6个月，缓刑6个月`
+},
+
+"case35": {
+title: "张某涉嫌传播淫秽物品牟利案",
+time: "2025年04月",
+procedure: "侦查",
+detail: `微博推广淫秽色网站链接，获利一万余元`,
+result: `无`
+},
+
+"case36": {
+title: "吴某传播淫秽物品牟利案",
+time: "2025年04月",
+procedure: "一审",
+detail: `推广淫秽网站，发布淫秽视频840部，获利13万元，取保候审`,
+result: `有期徒刑3年，缓刑4年，罚金19万5千元`
+},
+
+"case37": {
+title: "曹书程涉嫌传播淫秽物品案",
+time: "2025年05月",
+procedure: "侦查",
+detail: `推特引流，发布淫秽视频54部、淫秽图片7张`,
+result: `取保候审`
+},
+
+"case38": {
+title: "王某涉嫌诈骗案",
+time: "2025年06月",
+procedure: "审查起诉",
+detail: `虚构订单骗取政府消费补贴款，侦查阶段认定诈骗金额40余万元，沟通后检察院阶段减少为333990元`,
+result: `无`
+},
+
+"case39": {
+title: "朱某开设赌场案",
+time: "2025年06月",
+procedure: "一审",
+detail: `通过赌博机非法获利10万余元，辩护减少认定金额无果，不应认定为情节严重成功`,
+result: `有期徒刑1年10个月，罚金2万元`
+},
+
+"case40": {
+title: "姚某传播淫秽物品牟利案",
+time: "2025年06月",
+procedure: "一审",
+detail: `推特引流，发布255部淫秽视频，获利22000余元，取保候审`,
+result: `有期徒刑1年，缓刑1年，罚金2万5千元`
+},
+
+"case41": {
+title: "王某等诈骗案",
+time: "2025年08月",
+procedure: "一审",
+detail: `虚假培训诈骗，数额8万余元，取保候审`,
+result: `有期徒刑1年2个月，缓刑1年2个月，罚金6千元`
+},
+
+"case42": {
+title: "刘某等贩卖淫秽物品牟利案",
+time: "2025年09月",
+procedure: "二审",
+detail: `贩卖淫秽物品798部，退出违法所得3000元`,
+result: `驳回上诉维持原判，有期徒刑1年`
+},
+
+"case43": {
+title: "方某传播淫秽物品案",
+time: "2025年11月",
+procedure: "一审",
+detail: `传播淫秽物品19个，查看数共计124万余，取保候审`,
+result: `有期徒刑7个月，缓刑1年`
+},
+
+};
+function showCase(id){
+const c = cases[id];
+document.getElementById("detail").innerHTML = `
+<div class="case-title">${c.title}</div>
+<div class="meta">时间：${c.time} ｜ 程序：${c.procedure}</div>
+<div class="section"><h3>案情</h3><p>${c.detail}</p></div>
+<div class="section"><h3>结果</h3><p>${c.result}</p></div>
+`;
+}
+</script>
+</body>
+</html>
