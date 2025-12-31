@@ -764,11 +764,9 @@ function triggerSearch(keyword) {
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('searchInput');
 
-  input.addEventListener('keydown', (e) => {
-    if (e.key === "Enter") {
-      const keyword = input.value.trim().toLowerCase();
-      triggerSearch(keyword);
-    }
+  input.addEventListener('change', () => {
+    const keyword = input.value.trim().toLowerCase();
+    triggerSearch(keyword);
   });
 
   const links = document.querySelectorAll('.case-link');
